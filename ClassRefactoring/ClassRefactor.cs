@@ -12,9 +12,12 @@ namespace DeveloperSample.ClassRefactoring
         None, Coconut
     }
 
-    public class SwallowFactory
+    public class SwallowFactory:Swallow
     {
-        public Swallow GetSwallow(SwallowType swallowType) => new Swallow(swallowType);
+        public Swallow()
+        {
+            GetAirspeedVelocity(SwallowType swallowType) => new Swallow(swallowType);
+        }
     }
 
     public class Swallow
